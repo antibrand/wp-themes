@@ -3,14 +3,15 @@
 
 require( ABSPATH . 'wp-admin/includes/theme-install.php' );
 
-$tab = '';
+global $tab;
+
 wp_reset_vars( array( 'tab' ) );
 
 if ( ! current_user_can('install_themes') )
 	wp_die( __( 'Sorry, you are not allowed to install themes on this site.' ) );
 
 if ( is_multisite() && ! is_network_admin() ) {
-	wp_redirect( network_admin_url( 'theme-install.php' ) );
+	// wp_redirect( network_admin_url( '' ) );
 	exit();
 }
 
@@ -63,6 +64,7 @@ wp_enqueue_script( 'theme' );
 wp_enqueue_script( 'updates' );
 
 if ( $tab ) {
+
 	/**
 	 * Fires before each of the tabs are rendered on the Install Themes page.
 	 *
@@ -89,7 +91,7 @@ if ( $tab ) {
 
 		<ul class="filter-links">
 			<!-- Featured tab has been removed -->
-			<li><a href="#" data-sort="popular"><?php _ex( 'Popular', 'themes' ); ?></a></li>
+			<li><a class="current" href="#" data-sort="popular"><?php _ex( 'Popular', 'themes' ); ?></a></li>
 			<li><a href="#" data-sort="new"><?php _ex( 'Latest', 'themes' ); ?></a></li>
 			<li><a href="#" data-sort="favorites"><?php _ex( 'Favorites', 'themes' ); ?></a></li>
 		</ul>
