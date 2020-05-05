@@ -2,6 +2,8 @@
 
 Browse and install themes from the WordPress website.
 
-![cover image](https://raw.githubusercontent.com/antibrand/wp-themes/master/cover.jpg)
+The antibrand system has removed the interface for browsing the WordPress themes repository. This plugin replaces it for those who wish to opt in to such capability.
 
-When the antibrand system removes the interface for browsing the WordPress themes repository, this plugin will replace it for those who wish to maintain such capability. This plugin shall not be bundled with any release of the antibrand system.
+This plugin shall not be bundled with any release of the antibrand system.
+
+![cover image](https://raw.githubusercontent.com/antibrand/wp-themes/master/cover.jpg)
