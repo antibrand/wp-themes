@@ -33,7 +33,7 @@ class Init {
     public function __construct() {
 
 		// Add the theme install page.
-        add_action( 'admin_menu', [ $this, 'theme_install_page' ], 99 );
+        add_action( 'admin_menu', [ $this, 'theme_install_page' ] );
 	}
 
 	/**
