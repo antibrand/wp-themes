@@ -55,8 +55,8 @@ class Init {
 			__( 'Install WordPress Themes' ),
 			__( 'WordPress Themes' ),
 			'install_themes',
-			WPTP_ADMIN_SLUG,
-			[ $this, 'theme_install_page_output' ]
+			'wp-themes.php',
+			// [ $this, 'theme_install_page_output' ]
 		);
 
 		// Add content to the Help tab.
